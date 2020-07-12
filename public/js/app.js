@@ -16,13 +16,14 @@ weatherForm.addEventListener("submit", (event) => {
   let errorPara = document.getElementById("error");
   errorPara.textContent = "";
   contentPara1.textContent = "Loading.....";
+  contentPara2.textContent = "";
   weather(location, (data) => {
     if (data.error) {
       contentPara1.textContent = contentPara2.textContent = "";
       errorPara.textContent = data.error;
     } else {
-      contentPara1.textContent = "Weather: " + data.weather;
-      contentPara2.textContent = "location: " + data.place;
+      contentPara1.textContent = "location: " + data.place;
+      contentPara2.textContent = "Weather: " + data.weather;
     }
   });
 });
