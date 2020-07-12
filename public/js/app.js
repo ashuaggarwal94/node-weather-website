@@ -1,11 +1,9 @@
 const weather = (location, callback) => {
-  fetch("http://localhost:3000/weather?address=" + location).then(
-    (response) => {
-      response.json().then((data) => {
-        callback(data);
-      });
-    }
-  );
+  fetch("/weather?address=" + location).then((response) => {
+    response.json().then((data) => {
+      callback(data);
+    });
+  });
 };
 
 const weatherForm = document.querySelector("form");
