@@ -13,7 +13,7 @@ const geoCode = (address, callback) => {
     } else {
       const data = {
         latitude: body.features[0].center[1],
-        longitute: body.features[0].center[0],
+        longitude: body.features[0].center[0],
         place: body.features[0].place_name,
       };
       callback(undefined, data);
